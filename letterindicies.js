@@ -4,9 +4,9 @@ function countLetters(inputStr) {
 for (var i = 0; i < inputStr.length; i++) {
  var letter = inputStr[i]
  if (output[letter] == undefined) {
-  output[letter] = 1
+  output[letter] = [i]
 } else {
-  output[letter] += 1
+  output[letter].push(i)
 }
 }
   return output;
