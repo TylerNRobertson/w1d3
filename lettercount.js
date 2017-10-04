@@ -3,6 +3,9 @@ function countLetters(inputStr) {
   var output = {}
 for (var i = 0; i < inputStr.length; i++) {
  var letter = inputStr[i]
+ if (inputStr[i] === ' ') {
+  continue;
+ }
  if (output[letter] == undefined) {
   output[letter] = 1
 } else {
@@ -11,4 +14,4 @@ for (var i = 0; i < inputStr.length; i++) {
 }
   return output;
 }
-console.log(countLetters('hello'));
+console.log(countLetters('hello world'));
